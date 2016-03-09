@@ -95,7 +95,12 @@ namespace ISD_Course_task_5_static
         }
         public static void ExerciseFour()
         {
-            
+            Console.WriteLine("Enter main string: ");
+            string mainString = Console.ReadLine();
+            Console.WriteLine("Enter substring: ");
+            string subString = Console.ReadLine();
+            int index = mainString.IndexOf_My(subString);
+            Console.WriteLine("Index: {0}", index);
         }
     }
 }
