@@ -101,6 +101,9 @@ namespace ISD_Course_task_5_static
             string subString = Console.ReadLine();
             int index = mainString.IndexOf_My(subString);
             Console.WriteLine("Index: {0}", index);
+
+            Console.WriteLine("Before: {0}", mainString);
+            Console.WriteLine("After: {0}", mainString.Replace_My(subString, "на_это_поменяли"));
         }
     }
 }

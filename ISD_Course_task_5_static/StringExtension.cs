@@ -34,5 +34,31 @@ namespace ISD_Course_task_5_static
             }
             return -1;
         }
+        // нужно рефакторить, ужасная логика, спасибо, что хоть работает
+        public static string Replace_My(this string currentString, string oldValue, string newValue) 
+        {
+            string resultString = "";
+            for (int i = 0; i < currentString.Length; i++)
+            {
+                if (i < currentString.Length - oldValue.Length)
+                {
+                    string buffer = "";
+                    for (int j = i; j < i + oldValue.Length; j++)
+                    {
+                        buffer += currentString[j];
+                    }
+                    if (buffer == oldValue)
+                    {
+                        resultString += newValue;
+                        i += oldValue.Length - 1;
+                    }
+                    else
+                        resultString += currentString[i];
+                }
+                else
+                    resultString += currentString[i];
+            }
+            return resultString;
+        }
     }
 }
